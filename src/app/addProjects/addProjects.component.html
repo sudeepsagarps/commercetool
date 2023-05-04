@@ -1,0 +1,348 @@
+<form class="my-4" [formGroup]="registerForm" (ngSubmit)="registerFormSubmit(registerForm.value)">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="sector">Sector:</label>
+                <input
+                    type="text"
+                    formControlName="sector"
+                    id="sector"
+                    class="form-control"
+                    placeholder="Sector"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.sector.touched && f.sector.errors,
+                        'is-valid': f.sector.valid
+                    }"
+                />
+                <div *ngIf="f.sector.touched && f.sector.errors" class="invalid-feedback">
+                    <div *ngIf="f.sector.errors.required">Sector is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="poc">POC:</label>
+                <input
+                    type="text"
+                    formControlName="poc"
+                    id="poc"
+                    class="form-control"
+                    placeholder="POC"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.poc.touched && f.poc.errors,
+                        'is-valid': f.poc.valid
+                    }"
+                />
+                <div *ngIf="f.poc.touched && f.poc.errors" class="invalid-feedback">
+                    <div *ngIf="f.poc.errors.required">POC is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    formControlName="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Name"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.name.touched && f.name.errors,
+                        'is-valid': f.name.valid
+                    }"
+                />
+                <div *ngIf="f.name.touched && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">Name is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="notes">Notes:</label>
+                <input
+                    type="text"
+                    formControlName="notes"
+                    id="notes"
+                    class="form-control"
+                    placeholder="Notes"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.notes.touched && f.notes.errors,
+                        'is-valid': f.notes.valid
+                    }"
+                />
+                <div *ngIf="f.notes.touched && f.notes.errors" class="invalid-feedback">
+                    <div *ngIf="f.notes.errors.required">Notes is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="clientBase">ClientBase:</label>
+                <input
+                    type="text"
+                    formControlName="clientBase"
+                    id="clientBase"
+                    class="form-control"
+                    placeholder="ClientBase"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.clientBase.touched && f.clientBase.errors,
+                        'is-valid': f.clientBase.valid
+                    }"
+                />
+                <div *ngIf="f.clientBase.touched && f.clientBase.errors" class="invalid-feedback">
+                    <div *ngIf="f.clientBase.errors.required">ClientBase is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="practice">Practice:</label>
+                <input
+                    type="text"
+                    formControlName="practice"
+                    id="practice"
+                    class="form-control"
+                    placeholder="Practice"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.practice.touched && f.practice.errors,
+                        'is-valid': f.practice.valid
+                    }"
+                />
+                <div *ngIf="f.practice.touched && f.practice.errors" class="invalid-feedback">
+                    <div *ngIf="f.practice.errors.required">Practice is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="domain">Domain:</label>
+                <input
+                    type="text"
+                    formControlName="domain"
+                    id="domain"
+                    class="form-control"
+                    placeholder="Domain"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.domain.touched && f.domain.errors,
+                        'is-valid': f.domain.valid
+                    }"
+                />
+                <div *ngIf="f.domain.touched && f.domain.errors" class="invalid-feedback">
+                    <div *ngIf="f.domain.errors.required">Domain is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="lastServed">LastServed:</label>
+                <input
+                    type="text"
+                    formControlName="lastServed"
+                    id="lastServed"
+                    class="form-control"
+                    placeholder="LastServed"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.lastServed.touched && f.lastServed.errors,
+                        'is-valid': f.lastServed.valid
+                    }"
+                />
+                <div *ngIf="f.lastServed.touched && f.lastServed.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastServed.errors.required">LastServed is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="multiBrand">MultiBrand:</label>
+                <input
+                    type="text"
+                    formControlName="multiBrand"
+                    id="multiBrand"
+                    class="form-control"
+                    placeholder="MultiBrand"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.multiBrand.touched && f.multiBrand.errors,
+                        'is-valid': f.multiBrand.valid
+                    }"
+                />
+                <div *ngIf="f.multiBrand.touched && f.multiBrand.errors" class="invalid-feedback">
+                    <div *ngIf="f.multiBrand.errors.required">MultiBrand is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="multiSite">MultiSite:</label>
+                <input
+                    type="text"
+                    formControlName="multiSite"
+                    id="multiSite"
+                    class="form-control"
+                    placeholder="MultiSite"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.multiSite.touched && f.multiSite.errors,
+                        'is-valid': f.multiSite.valid
+                    }"
+                />
+                <div *ngIf="f.multiSite.touched && f.multiSite.errors" class="invalid-feedback">
+                    <div *ngIf="f.multiSite.errors.required">MultiSite is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="regionUS">RegionUS:</label>
+                <input
+                    type="text"
+                    formControlName="regionUS"
+                    id="regionUS"
+                    class="form-control"
+                    placeholder="RegionUS"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.regionUS.touched && f.regionUS.errors,
+                        'is-valid': f.regionUS.valid
+                    }"
+                />
+                <div *ngIf="f.regionUS.touched && f.regionUS.errors" class="invalid-feedback">
+                    <div *ngIf="f.regionUS.errors.required">RegionUS is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="regionCA">RegionCA:</label>
+                <input
+                    type="text"
+                    formControlName="regionCA"
+                    id="regionCA"
+                    class="form-control"
+                    placeholder="RegionCA"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.regionCA.touched && f.regionCA.errors,
+                        'is-valid': f.regionCA.valid
+                    }"
+                />
+                <div *ngIf="f.regionCA.touched && f.regionCA.errors" class="invalid-feedback">
+                    <div *ngIf="f.regionCA.errors.required">RegionCA is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="regionEU">RegionEU:</label>
+                <input
+                    type="text"
+                    formControlName="regionEU"
+                    id="regionEU"
+                    class="form-control"
+                    placeholder="RegionEU"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.regionEU.touched && f.regionEU.errors,
+                        'is-valid': f.regionEU.valid
+                    }"
+                />
+                <div *ngIf="f.regionEU.touched && f.regionEU.errors" class="invalid-feedback">
+                    <div *ngIf="f.regionEU.errors.required">RegionEU is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="regionAUNZ">RegionAUNZ:</label>
+                <input
+                    type="text"
+                    formControlName="regionAUNZ"
+                    id="regionAUNZ"
+                    class="form-control"
+                    placeholder="RegionAUNZ"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.regionAUNZ.touched && f.regionAUNZ.errors,
+                        'is-valid': f.regionAUNZ.valid
+                    }"
+                />
+                <div *ngIf="f.regionAUNZ.touched && f.regionAUNZ.errors" class="invalid-feedback">
+                    <div *ngIf="f.regionAUNZ.errors.required">RegionAUNZ is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="regionChina">RegionChina:</label>
+                <input
+                    type="text"
+                    formControlName="regionChina"
+                    id="regionChina"
+                    class="form-control"
+                    placeholder="RegionChina"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.regionChina.touched && f.regionChina.errors,
+                        'is-valid': f.regionChina.valid
+                    }"
+                />
+                <div *ngIf="f.regionChina.touched && f.regionChina.errors" class="invalid-feedback">
+                    <div *ngIf="f.regionChina.errors.required">RegionChina is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="brandNames">BrandNames:</label>
+                <input
+                    type="text"
+                    formControlName="brandNames"
+                    id="brandNames"
+                    class="form-control"
+                    placeholder="BrandNames"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.brandNames.touched && f.brandNames.errors,
+                        'is-valid': f.brandNames.valid
+                    }"
+                />
+                <div *ngIf="f.brandNames.touched && f.brandNames.errors" class="invalid-feedback">
+                    <div *ngIf="f.brandNames.errors.required">BrandNames is required!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,138 @@
+<form class="my-4" [formGroup]="registerForm" (ngSubmit)="registerFormSubmit(registerForm.value)">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="fname">Category:</label>
+                <input
+                    type="text"
+                    formControlName="category"
+                    id="category"
+                    class="form-control"
+                    placeholder="Category"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.category.touched && f.category.errors,
+                        'is-valid': f.category.valid
+                    }"
+                />
+                <div *ngIf="f.category.touched && f.category.errors" class="invalid-feedback">
+                    <div *ngIf="f.category.errors.required">Category is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="name">SubCategory:</label>
+                <input
+                    type="text"
+                    formControlName="subCategory"
+                    id="subCategory"
+                    class="form-control"
+                    placeholder="Sub Category"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.subCategory.touched && f.subCategory.errors,
+                        'is-valid': f.subCategory.valid
+                    }"
+                />
+                <div *ngIf="f.subCategory.touched && f.subCategory.errors" class="invalid-feedback">
+                    <div *ngIf="f.subCategory.errors.required">Sub Category is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    formControlName="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Name"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.name.touched && f.name.errors,
+                        'is-valid': f.name.valid
+                    }"
+                />
+                <div *ngIf="f.name.touched && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">Name is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="name">Description:</label>
+                <input
+                    type="text"
+                    formControlName="description"
+                    id="description"
+                    class="form-control"
+                    placeholder="Description"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.description.touched && f.description.errors,
+                        'is-valid': f.description.valid
+                    }"
+                />
+                <div *ngIf="f.description.touched && f.description.errors" class="invalid-feedback">
+                    <div *ngIf="f.description.errors.required">Description is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="name">Type:</label>
+                <input
+                    type="text"
+                    formControlName="type"
+                    id="type"
+                    class="form-control"
+                    placeholder="Type"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.type.touched && f.type.errors,
+                        'is-valid': f.type.valid
+                    }"
+                />
+                <div *ngIf="f.type.touched && f.type.errors" class="invalid-feedback">
+                    <div *ngIf="f.type.errors.required">Type is required!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 my-3">
+            <div class="form-group">
+                <label for="name">FeatureRef:</label>
+                <input
+                    type="text"
+                    formControlName="featureRef"
+                    id="featureRef"
+                    class="form-control"
+                    placeholder="FeatureRef"
+                    required
+                    [ngClass]="{
+                        'is-invalid': f.featureRef.touched && f.featureRef.errors,
+                        'is-valid': f.featureRef.valid
+                    }"
+                />
+                <div *ngIf="f.featureRef.touched && f.featureRef.errors" class="invalid-feedback">
+                    <div *ngIf="f.featureRef.errors.required">FeatureRef is required!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group">
+                <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">
+                    Add Feature
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
